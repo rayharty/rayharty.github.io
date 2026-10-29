@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Ray Harty</title>
+    <meta
+      name="description"
+      content="Ray Harty is a five-piece indie guitar band from Prague. Live dates, music and links to Spotify, Apple Music, YouTube and Instagram."
+    />
+    <link rel="canonical" href="https://rayharty.cz/en/" />
+    <link rel="alternate" hreflang="cs" href="https://rayharty.cz/" />
+    <link rel="alternate" hreflang="en" href="https://rayharty.cz/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://rayharty.cz/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ray Harty" />
+    <meta property="og:title" content="Ray Harty" />
+    <meta property="og:description" content="Five-piece indie guitar band from Prague. Live dates, music, contact." />
+    <meta property="og:url" content="https://rayharty.cz/en/" />
+    <meta property="og:image" content="https://rayharty.cz/assets/img/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="cs_CZ" />
+    <meta name="theme-color" content="#1838d6" />
+
+    <link rel="icon" href="../assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
+    <link rel="preload" href="../assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="logo" href="#top"><img src="../assets/img/logo.png" alt="Ray Harty" width="1200" height="180" /></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#live">Live</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="lang-switch" href="../" hreflang="cs" lang="cs" aria-label="Česká verze">CZ</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </header>
+
+    <main id="content">
+      <section class="hero" id="top">
+        <picture class="hero__media">
+          <source media="(max-width: 700px) and (orientation: portrait)" srcset="../assets/img/hero-mobile.jpg" />
+          <img src="../assets/img/hero.jpg" alt="" fetchpriority="high" />
+        </picture>
+        <div class="hero__content">
+          <h1 class="hero__title"><img src="../assets/img/logo.png" alt="Ray Harty" width="1200" height="180" /></h1>
+          <div class="hero__release" data-hero-release hidden></div>
+        </div>
+        <div class="ticker" data-album hidden></div>
+      </section>
+
+      <section class="section section--light" id="live">
+        <h2 class="section__title">Live</h2>
+        <ul class="concerts" data-concerts></ul>
+        <p class="concerts__status" data-concerts-status>Loading shows…</p>
+      </section>
+
+      <section class="section section--blue" id="music">
+        <h2 class="section__title">Music</h2>
+        <div class="releases" data-releases></div>
+      </section>
+
+      <section class="section section--light" id="about">
+        <h2 class="section__title">About</h2>
+        <div class="about__grid">
+          <div class="about__text" data-bio>
+            <p class="lead">Ray Harty is a five-piece indie guitar band from Prague, formed in 2025.</p>
+            <p>
+              They draw mainly on the British and Irish guitar scene – the energy of post-punk and the big melodies of
+              britpop. After winning Zapínač, a nationwide competition for young bands, they played ČEZfest alongside
+              David Koller and Pokáč and opened for Reflections of Karma in Hradec Králové.
+            </p>
+            <p>
+              In 2026 they released the singles “fomo” and “the world is spinning (demo)”, and they are now working on
+              their debut album.
+            </p>
+          </div>
+          <figure class="about__media">
+            <img src="../assets/img/kapela.jpg" alt="Ray Harty in the stands of a stadium" width="1200" height="1500" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section--blue" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <div class="contact__links" data-links-block>
+          <p class="contact__label">Listen &amp; follow</p>
+          <ul class="link-list" data-links></ul>
+        </div>
+        <div data-email-block>
+          <p class="contact__label">Booking &amp; contact</p>
+          <a class="contact__email" data-email></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year>2026</span> Ray Harty</p>
+      <a href="../" hreflang="cs" lang="cs">Česky</a>
+    </footer>
+  </body>
+</html>

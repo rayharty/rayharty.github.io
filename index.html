@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Ray Harty</title>
+    <meta
+      name="description"
+      content="Ray Harty je pětičlenná indie kytarovka z Prahy. Koncerty, hudba a odkazy na Spotify, Apple Music, YouTube a Instagram."
+    />
+    <link rel="canonical" href="https://rayharty.cz/" />
+    <link rel="alternate" hreflang="cs" href="https://rayharty.cz/" />
+    <link rel="alternate" hreflang="en" href="https://rayharty.cz/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://rayharty.cz/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ray Harty" />
+    <meta property="og:title" content="Ray Harty" />
+    <meta property="og:description" content="Pětičlenná indie kytarovka z Prahy. Koncerty, hudba, kontakt." />
+    <meta property="og:url" content="https://rayharty.cz/" />
+    <meta property="og:image" content="https://rayharty.cz/assets/img/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta name="theme-color" content="#1838d6" />
+
+    <link rel="icon" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+    <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+
+    <header class="site-header">
+      <a class="logo" href="#top"><img src="assets/img/logo.png" alt="Ray Harty" width="1200" height="180" /></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hlavní navigace">
+        <ul>
+          <li><a href="#koncerty">Koncerty</a></li>
+          <li><a href="#hudba">Hudba</a></li>
+          <li><a href="#o-nas">O nás</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class="lang-switch" href="en/" hreflang="en" lang="en" aria-label="English version">EN</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </header>
+
+    <main id="obsah">
+      <section class="hero" id="top">
+        <picture class="hero__media">
+          <source media="(max-width: 700px) and (orientation: portrait)" srcset="assets/img/hero-mobile.jpg" />
+          <img src="assets/img/hero.jpg" alt="" fetchpriority="high" />
+        </picture>
+        <div class="hero__content">
+          <h1 class="hero__title"><img src="assets/img/logo.png" alt="Ray Harty" width="1200" height="180" /></h1>
+          <div class="hero__release" data-hero-release hidden></div>
+        </div>
+        <div class="ticker" data-album hidden></div>
+      </section>
+
+      <section class="section section--light" id="koncerty">
+        <h2 class="section__title">Koncerty</h2>
+        <ul class="concerts" data-concerts></ul>
+        <p class="concerts__status" data-concerts-status>Načítám koncerty…</p>
+      </section>
+
+      <section class="section section--blue" id="hudba">
+        <h2 class="section__title">Hudba</h2>
+        <div class="releases" data-releases></div>
+      </section>
+
+      <section class="section section--light" id="o-nas">
+        <h2 class="section__title">O nás</h2>
+        <div class="about__grid">
+          <div class="about__text" data-bio>
+            <p class="lead">Ray Harty je pětičlenná indie kytarovka z Prahy, která vznikla v roce 2025.</p>
+            <p>
+              Inspiraci hledá hlavně na britské a irské kytarové scéně – v energii post-punku i ve velkých melodiích
+              britpopu. Po vítězství v celostátní soutěži mladých kapel Zapínač si zahrála na ČEZfestu vedle Davida
+              Kollera a Pokáče a předskakovala Reflections of Karma v Hradci Králové.
+            </p>
+            <p>
+              V roce 2026 vydala singly „fomo“ a „the world is spinning (demo)“ a teď pracuje na debutovém albu.
+            </p>
+          </div>
+          <figure class="about__media">
+            <img src="assets/img/kapela.jpg" alt="Kapela Ray Harty na tribuně stadionu" width="1200" height="1500" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section--blue" id="kontakt">
+        <h2 class="section__title">Kontakt</h2>
+        <div class="contact__links" data-links-block>
+          <p class="contact__label">Poslouchejte a sledujte</p>
+          <ul class="link-list" data-links></ul>
+        </div>
+        <div data-email-block>
+          <p class="contact__label">Booking a kontakt</p>
+          <a class="contact__email" data-email></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year>2026</span> Ray Harty</p>
+      <a href="en/" hreflang="en" lang="en">English</a>
+    </footer>
+  </body>
+</html>
