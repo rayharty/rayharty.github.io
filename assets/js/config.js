@@ -6,7 +6,7 @@
 
 const SITE = {
   // Veřejná adresa webu (s lomítkem na konci) – kvůli Googlu.
-  url: 'https://rayharty.cz/',
+  url: 'https://jchrasti.github.io/ray-harty/',
 
   // Pro Google (knowledge panel).
   founded: '2025',
