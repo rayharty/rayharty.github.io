@@ -50,22 +50,25 @@ const SITE = {
   // Vydané nahrávky, nejnovější první (ta se ukáže i nahoře na úvodu).
   // type: 'single' | 'ep' | 'album'
   // cover: obal zmenšený pro web (čtverec, 1000×1000 px) v assets/img/covers
+  // spotify / appleMusic / youtube: odkazy na ikonách (prázdné se nezobrazí)
   releases: [
     {
       title: 'the world is spinning (demo)',
       type: 'single',
       year: 2026,
       cover: 'assets/img/covers/the-world-is-spinning.jpg',
-      listen: 'https://open.spotify.com/track/7AVFTibpwL3vFm9a5njG5d',
-      video: 'https://www.youtube.com/watch?v=zDacJXE52W8',
+      spotify: 'https://open.spotify.com/track/7AVFTibpwL3vFm9a5njG5d',
+      appleMusic: 'https://music.apple.com/cz/album/the-world-is-spinning-demo-single/1881255500',
+      youtube: 'https://www.youtube.com/watch?v=zDacJXE52W8',
     },
     {
       title: 'fomo',
       type: 'single',
       year: 2026,
       cover: 'assets/img/covers/fomo.jpg',
-      listen: 'https://open.spotify.com/track/5rjDo5svzy5l32cqBmngrF',
-      video: 'https://www.youtube.com/watch?v=Dm9zoJQu-_0',
+      spotify: 'https://open.spotify.com/track/5rjDo5svzy5l32cqBmngrF',
+      appleMusic: 'https://music.apple.com/cz/album/fomo-single/1877581005',
+      youtube: 'https://www.youtube.com/watch?v=Dm9zoJQu-_0',
     },
   ],
 };

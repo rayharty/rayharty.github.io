@@ -171,6 +171,20 @@ a {
   color: var(--white);
 }
 
+/* Square brand-icon link (Spotify, Apple Music, YouTube) */
+.button--icon {
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+}
+
+.button--icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: currentColor;
+}
+
 /* --- header -------------------------------------------------------- */
 
 .site-header {
