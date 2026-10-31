@@ -7,6 +7,10 @@
       locale: 'cs-CZ',
       menu: 'Menu',
       close: 'Zavřít',
+      colours: 'Barvy',
+      customPrimary: 'Vlastní hlavní barva',
+      customPaper: 'Vlastní barva pozadí',
+      customAccent: 'Vlastní doplňková barva',
       tickets: 'Vstupenky',
       cover: 'obal',
       types: { single: 'Singl', ep: 'EP', album: 'Album' },
@@ -21,6 +25,10 @@
       locale: 'en-GB',
       menu: 'Menu',
       close: 'Close',
+      colours: 'Colours',
+      customPrimary: 'Custom main colour',
+      customPaper: 'Custom background colour',
+      customAccent: 'Custom accent colour',
       tickets: 'Tickets',
       cover: 'cover',
       types: { single: 'Single', ep: 'EP', album: 'Album' },
@@ -126,6 +134,59 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') setMenu(false);
   });
+
+  // --- colour theme switcher (theme.js applies the theme itself) -------------
+
+  const themes = SITE.themes || [];
+  const themeSwitch = document.querySelector('[data-theme-switch]');
+  if (themes.length > 1) {
+    const presets = themes.map((theme) =>
+      h('button', {
+        type: 'button',
+        class: 'theme-switch__option',
+        style: `--swatch-a: ${theme.primary}; --swatch-b: ${theme.paper}; --swatch-c: ${theme.accent}`,
+        title: theme.name[LANG],
+        'aria-label': theme.name[LANG],
+      })
+    );
+    const picker = (label) => h('input', { type: 'color', class: 'theme-switch__custom', title: label, 'aria-label': label });
+    const pickers = { primary: picker(T.customPrimary), paper: picker(T.customPaper), accent: picker(T.customAccent) };
+    const customTheme = () =>
+      resolveTheme([pickers.primary, pickers.paper, pickers.accent].map((input) => input.value.slice(1)).join('-'));
+
+    function sync() {
+      const theme = resolveTheme(document.documentElement.dataset.theme) || themes[0];
+      presets.forEach((button, i) => button.setAttribute('aria-pressed', String(themes[i].id === theme.id)));
+      for (const [key, input] of Object.entries(pickers)) input.value = theme[key];
+    }
+
+    // Remember the choice and put it in the address bar, so the link can be shared.
+    function choose(theme) {
+      applyTheme(theme);
+      rememberTheme(theme);
+      const url = new URL(location.href);
+      url.searchParams.set('theme', theme.id);
+      history.replaceState(null, '', url);
+      sync();
+    }
+
+    presets.forEach((button, i) => button.addEventListener('click', () => choose(themes[i])));
+    // Live preview while dragging; save only once a colour is picked.
+    Object.values(pickers).forEach((input) => {
+      input.addEventListener('input', () => applyTheme(customTheme()));
+      input.addEventListener('change', () => choose(customTheme()));
+    });
+
+    themeSwitch.append(
+      h('span', { class: 'theme-switch__label' }, T.colours),
+      ...presets,
+      h('span', { class: 'theme-switch__divider', 'aria-hidden': 'true' }),
+      ...Object.values(pickers)
+    );
+    themeSwitch.setAttribute('aria-label', T.colours);
+    sync();
+    themeSwitch.hidden = false;
+  }
 
   // --- links & contact ------------------------------------------------
 
@@ -304,7 +365,7 @@
         h('span', { class: 'concert__venue' }, [c.misto, c.cas].filter(Boolean).join(' · ')),
         note && h('span', { class: 'concert__note' }, note)
       ),
-      h('div', { class: 'concert__action' }, tickets && externalLink(tickets, T.tickets, 'button'))
+      h('div', { class: 'concert__action' }, tickets && externalLink(tickets, T.tickets, 'button button--solid'))
     );
   }
 

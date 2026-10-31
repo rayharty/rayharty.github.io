@@ -8,6 +8,20 @@ const SITE = {
   // Veřejná adresa webu (s lomítkem na konci) – kvůli Googlu.
   url: 'https://rayharty.github.io/',
 
+  // Barevné varianty – přepínač je v záhlaví (na mobilu v menu). První je výchozí.
+  // primary = hlavní barva (sekce, nadpisy), paper = pozadí světlých sekcí,
+  // accent = doplňková barva (pás se skladbami, tlačítka, zvýraznění).
+  // Barvy pište jako #rrggbb. Konkrétní variantu jde poslat odkazem: …/?theme=cervena
+  // Když necháte jen jednu, přepínač zmizí a web bude mít jen ji.
+  themes: [
+    { id: 'modra', name: { cs: 'Modrá + oranžová', en: 'Blue + orange' }, primary: '#1838d6', paper: '#ffffff', accent: '#ff6b35' },
+    { id: 'modra-ruzova', name: { cs: 'Modrá + růžová', en: 'Blue + pink' }, primary: '#1838d6', paper: '#ffffff', accent: '#ff8fd0' },
+    { id: 'noc', name: { cs: 'Noc', en: 'Night' }, primary: '#101b4d', paper: '#f3efe4', accent: '#e8b931' },
+    { id: 'cervena', name: { cs: 'Červená', en: 'Red' }, primary: '#c8231a', paper: '#f6f1e7', accent: '#141414' },
+    { id: 'travnik', name: { cs: 'Trávník', en: 'Pitch' }, primary: '#1c6b38', paper: '#f4f1e8', accent: '#c4410c' },
+    { id: 'cerna', name: { cs: 'Černá + modrá', en: 'Black + blue' }, primary: '#111111', paper: '#ffffff', accent: '#1838d6' },
+  ],
+
   // Pro Google (knowledge panel).
   founded: '2025',
   genres: ['Indie rock', 'Post-punk', 'Britpop'],

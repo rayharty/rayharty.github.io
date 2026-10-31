@@ -29,7 +29,8 @@
     <link rel="apple-touch-icon" href="assets/img/favicon.png" />
     <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js" defer></script>
   </head>
   <body>
@@ -44,6 +45,7 @@
           <li><a href="#o-nas">O nás</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
+        <div class="theme-switch" role="group" data-theme-switch hidden></div>
       </nav>
       <a class="lang-switch" href="en/" hreflang="en" lang="en" aria-label="English version">EN</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -68,7 +70,7 @@
         <p class="concerts__status" data-concerts-status>Načítám koncerty…</p>
       </section>
 
-      <section class="section section--blue" id="hudba">
+      <section class="section section--primary" id="hudba">
         <h2 class="section__title">Hudba</h2>
         <div class="releases" data-releases></div>
       </section>
@@ -94,7 +96,7 @@
         </div>
       </section>
 
-      <section class="section section--blue" id="kontakt">
+      <section class="section section--primary" id="kontakt">
         <h2 class="section__title">Kontakt</h2>
         <div class="contact__links" data-links-block>
           <p class="contact__label">Poslouchejte a sledujte</p>
