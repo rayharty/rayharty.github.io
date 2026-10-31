@@ -536,6 +536,12 @@ a {
   gap: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
 }
 
+/* Column layout so the icons sit at the bottom and line up across a row */
+.release {
+  display: flex;
+  flex-direction: column;
+}
+
 .release__cover {
   aspect-ratio: 1;
   margin-bottom: 1rem;
@@ -579,6 +585,10 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.release .release__actions {
+  margin-top: auto;
 }
 
 @media (max-width: 600px) {
